@@ -13,31 +13,62 @@ set your .filter results to this variable.
 
 const users = [
   {
-    firstName: 'Ola',
-    lastName: 'Nordmann',
+    firstName: "Ola",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: false,
   },
   {
-    firstName: 'Kari',
-    lastName: 'Nordmann',
+    firstName: "Kari",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: true,
   },
   {
-    firstName: 'Jan',
-    lastName: 'Nordmann',
+    firstName: "Jan",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: true,
   },
   {
-    firstName: 'Nora',
-    lastName: 'Nordmann',
+    firstName: "Nora",
+    lastName: "Nordmann",
     isAdmin: false,
     isVerified: false,
   },
 ];
 
-const filteredUsers = null; // Replace null and add .filter code here
+const filteredUsers = users.filter(
+  (value) => value.isAdmin === true || value.isVerified === true
+);
 
 console.log(filteredUsers);
+
+const card = [
+  {
+    id: 01,
+    work: "cleaner",
+    name: "john",
+  },
+  {
+    id: 02,
+    work: "designer",
+    name: "olav",
+  },
+  {
+    id: 03,
+    work: "guard",
+    name: "rita",
+  },
+];
+
+const cardArray = card.map((value) => `I am ${value.name}`);
+console.log(cardArray);
+
+// const newArray = cardArray.filter((person) => {
+//   if (person.work === "designer") {
+//     return true;
+//   }
+// });
+
+// console.log(newArray);

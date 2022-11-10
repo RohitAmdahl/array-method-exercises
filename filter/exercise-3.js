@@ -13,22 +13,31 @@ set your .filter result to this variable.
 
 const students = [
   {
-    studentName: 'Ola',
+    studentName: "Ola",
     mark: 50,
     isOnline: false,
   },
   {
-    studentName: 'Kari',
+    studentName: "Kari",
     mark: 80,
     isOnline: true,
   },
   {
-    studentName: 'Nora',
+    studentName: "Nora",
     mark: 60,
     isOnline: false,
   },
 ];
 
-const filteredStudents = null; // Replace null and add .filter code here
+const filteredStudents = students.filter((value, index) => {
+  console.log(value, index);
+  if (value.mark >= 75) {
+    return true;
+  }
+}); // Replace null and add .filter code here
 
 console.log(filteredStudents);
+
+const results = filteredStudents.forEach((element) => {
+  console.log(element);
+});
